@@ -1,0 +1,5 @@
+# Start from base image
+FROM fredmanglis/guix-conda-base-img:latest
+
+# Create an environment `default-env`
+RUN conda create --name default-env
