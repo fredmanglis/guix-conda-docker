@@ -1,0 +1,5 @@
+# Start from base image
+FROM fredmanglis/guix-bioconda:latest
+
+# Install sambamba
+RUN conda install --yes --name default-env sambamba
