@@ -1,0 +1,8 @@
+# Start from base image
+FROM fredmanglis/guix-conda-plain:latest
+
+# Configure channels for bioconda
+RUN conda config --add channels r
+RUN conda config --add channels defaults
+RUN conda config --add channels conda-forge
+RUN conda config --add channels bioconda
