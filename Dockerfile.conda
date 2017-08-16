@@ -1,5 +1,11 @@
 # Start from base image
-FROM fredmanglis/guix-conda-base-img:latest
+FROM ubuntu:latest
+
+# Add pack to image
+COPY ./conda-pack.tar.gz /tmp/conda-pack.tar.gz
+
+# Extract pack
+RUN tar -xzf /tmp/conda-pack.tar.gz && rm -f /tmp/conda-pack.tar.gz
 
 # Create an environment `default-env`
-RUN conda create --name default-env
+RUN /opt/gnu/bin/conda create --name default-env

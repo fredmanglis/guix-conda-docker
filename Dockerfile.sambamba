@@ -2,4 +2,4 @@
 FROM fredmanglis/guix-bioconda:latest
 
 # Install sambamba
-RUN conda install --yes --name default-env sambamba
+RUN /opt/gnu/bin/conda install --yes --name default-env sambamba
